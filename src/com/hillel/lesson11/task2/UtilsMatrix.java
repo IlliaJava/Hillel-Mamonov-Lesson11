@@ -44,7 +44,7 @@ public class UtilsMatrix {
     }
 
     public static int[] toArray(int[][] matrix) {
-        int newArray[] = new int[matrix.length * matrix[0].length];
+        int[] newArray = new int[matrix.length * matrix[0].length];
         int indexNewArray = 0;
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {

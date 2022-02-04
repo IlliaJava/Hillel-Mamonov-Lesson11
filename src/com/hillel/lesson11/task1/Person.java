@@ -14,16 +14,12 @@ public class Person {
     private final int height;
     private final int weight;
 
-    public Person() {
-        this.firstName = String.valueOf(PersonFactory.firstNamesList.randomName());
-        this.familyName = String.valueOf(PersonFactory.familyNamesList.randomFamilyName());
-        this.age = PersonFactory.randomAge();
-        this.height = PersonFactory.randomHeight();
-        this.weight = (int) (PersonFactory.weightIndex * getHeight() * getHeight() / 10000);
-    }
-
-    public double getHeight() {
-        return height;
+    public Person(String firstName, String familyName, int age, int height, int weight) {
+        this.firstName = firstName;
+        this.familyName = familyName;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
     }
 
     @Override
