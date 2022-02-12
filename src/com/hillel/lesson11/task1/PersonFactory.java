@@ -9,13 +9,11 @@ public class PersonFactory {
     static Random RANDOM = new Random();
 
     /**
-     * This method creates list of persons (of type "Person"), and filling it with actual instances.
-     *
+     * This method fills list of persons (of type "Person") with actual instances.
+     *@param personsList - is original List<Person>, where you would like to add instances.
      * @param personsCount - is how many persons would you like to have in the list
-     * @return list of generated persons as an ArrayList
      */
-    static List<Person> generatePersonsList(int personsCount) {
-        List<Person> personsList = new ArrayList<>();
+    static void generatePersonsList(List<Person> personsList, int personsCount) {
         for (int i = 1; i <= personsCount; i++) {
             String firstName = String.valueOf(randomName());
             String familyName = String.valueOf(randomFamilyName());
@@ -24,7 +22,7 @@ public class PersonFactory {
             int weight = (int) (weightIndex * height * height / 10000);
             personsList.add(new Person(firstName, familyName, age, height, weight));
         }
-        return personsList;
+
     }
 
     /**
