@@ -1,6 +1,5 @@
 package com.hillel.lesson11.task1;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -22,7 +21,6 @@ public class PersonFactory {
             int weight = (int) (weightIndex * height * height / 10000);
             personsList.add(new Person(firstName, familyName, age, height, weight));
         }
-
     }
 
     /**
